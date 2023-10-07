@@ -8,27 +8,28 @@ import java.util.LinkedList;
 
 public class Tree {
 
+	/** Class member fields */
 	private int height;
 	private Node root;
 
+	/** Empty argument constructor */
 	public Tree() {
 		setRoot(new Node(1));
-	}
+	}//end empty argument constructor
 
 	/**
 	 * @return the root
 	 */
-
 	public Node getRoot() {
 		return root;
-	}
+	}// end getNode
 
 	/**
 	 * @param root the root to set
 	 */
 	public void setRoot(Node root) {
 		this.root = root;
-	}
+	}// end setRoot
 
 	// returns the root node
 	public Node generatePracticeTree(int height) {
@@ -63,20 +64,21 @@ public class Tree {
 				System.out.println("Adding Right Child: " + (value));
 				pn.setrChild(new Node(value));
 				childQ.add(pn.getrChild());
-			}
-
+			}// end for statement
 			level++;
 			System.out.println("Level: " + level);
-		}
-
+		}// end while loop
 		return root;
-
-	}
+	}// end generatePracticeTree
 	
+	/** Get the height of the tree
+	 * @return return the height of the tree */
 	public int getHeight() {
 		return height;
-	}
+	}// end getHeight
 	
+	/** Get the number of nodes in the tree
+	 * @return return the number of nodes in the tree */
 	public int getNumberOfNodes() {
 		int numberOfNodes = 0;
 		
@@ -85,5 +87,5 @@ public class Tree {
 		}
 		
 		return numberOfNodes;
-	}
-}
+	}// end getNumberOfNodes
+}// end Tree
